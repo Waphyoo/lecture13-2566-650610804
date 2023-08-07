@@ -1,3 +1,6 @@
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Navbar } from "@/components/Navbar";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +23,14 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <div style={{ maxWidth: "600px" }} className="mx-auto">
+          <Header />
+          <Navbar />
           {children}
+          <Footer
+            year="2023"
+            fullName="Watunyoo Phanapaisaarnsakul"
+            studentId="650610804"
+          />
         </div>
       </body>
     </html>
